@@ -1,3 +1,4 @@
+This file is to give references to use in other dotfiles
 #LS color Codes
 #This is the color codes for LS_COLOR
 di = directory

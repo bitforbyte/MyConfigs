@@ -1,6 +1,6 @@
 #Include alises
 files=(.bashrc_aliases .bashrc_test .bashrc_profile)
-path="$HOME/.dotFiles/"
+path="$HOME/.dotFiles/MyConfigs/"
 for file in ${files[@]}
 do
 	file_to_load=$path$file
