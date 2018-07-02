@@ -35,7 +35,7 @@ parse_git_branch() {
 # Use the parse_git_branch() function for that.                                                           
 parse_git_branch_color() {
     br=$(parse_git_branch)
-    if [[ $br == "(master)" || $br == "(master!)" || $br == "(master!!)" || $br == "(master!!!)" ]]; then
+    if [[ $br == " on (master)" || $br == " on (master!)" || $br == " on (master!!)" || $br == " on (master!!!)" ]]; then
         echo -e "${yellow}"
     else
         echo -e "${green}"
