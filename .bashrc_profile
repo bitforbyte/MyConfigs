@@ -47,5 +47,5 @@ parse_git_branch_color() {
 
 # With color:
 export PS1="$ps1_blue"
-export PS1+="Ken in $ps1_white[\W]\[\$(parse_git_branch_color)\]\$(parse_git_branch)$ps1_blue:$ps1_white "
+export PS1+="Ken in $ps1_white[\W]$ps1_blue on \[\$(parse_git_branch_color)\]\$(parse_git_branch)$ps1_blue:$ps1_white "
 
