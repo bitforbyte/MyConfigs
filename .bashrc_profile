@@ -1,7 +1,7 @@
 USER='Ken'
 # Colors for the prompt
 blue="\033[0;34m"
-red="\033[0;31m"
+yellow="\033[0;93m"
 white="\033[0;37m"
 green="\033[0;32m"
 
@@ -36,7 +36,7 @@ parse_git_branch() {
 parse_git_branch_color() {
     br=$(parse_git_branch)
     if [[ $br == "(master)" || $br == "(master!)" || $br == "(master!!)" || $br == "(master!!!)" ]]; then
-        echo -e "${blue}"
+        echo -e "${yellow}"
     else
         echo -e "${green}"
     fi
