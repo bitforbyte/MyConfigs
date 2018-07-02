@@ -1,0 +1,55 @@
+# Extend History size
+export HISTFILESIZE=10000
+export HISTSIZE=500
+
+# Don't put duplicate lines in the history and non that start with a space
+export HISTCONTROL=erasedups:ignoredups:ignorespace
+
+# check the window size after each command and update the valeus of lines an columns
+shopt -s checkwinsize
+
+# Set the default editor
+export EDITOR=vim
+export VISUAL=vim
+
+# Set colors for ls and Grep commands (grep, egrep, zgrep)
+export CLICOLOR=1
+export ls_colors='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
+#export GREP_OPTIONS='--color=auto'
+
+# Color man pages in less to make easier to read
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+
+# Functions
+ftext ()
+{
+    # -i case-insensitive
+    # -I ignore binary files
+    # -H causes filename to be printed
+    # -r recursive search
+    # -n causes line number to be printed
+    grep -iIHrn --color=always "$1" . | less -r
+}
+
+#Not currently working
+# Show network information
+netinfo ()
+{
+    echo "-------------------- Network Information ---------------------"
+    /sbin/ifconfig | awk /'inet addr/ {print $2}'
+    ifconfig | awk /'inet addr/ {print $2}'
+    echo ""
+    /sbin/ifconfig | awk /'Bcast/ {print $3}'
+    echo ""
+    /sbin/ifconfig | awk /'inet addr/ {print $4}'
+    /sbin/ifconfig | awk /'HWaddr/ {print $4, $5}'
+    echo "--------------------------------------------------------------"    
+}
+
+

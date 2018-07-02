@@ -1,0 +1,53 @@
+alias q='exit'
+alias c='clear'
+alias h='history'
+alias cs='clear;ls --color'
+alias ls='ls --color'
+alias lsa='ls -a --color'
+alias null='/dev/null'
+
+#directories
+alias home='cd ~'
+alias dtop='cd ~/Desktop'
+alias gdrive='cd ~/Google\ Drive'
+alias cppproj='cd ~/Google\ Drive/Projects/C++_Projects'
+alias cproj='cd ~/Google\ Drive/Projects/C_Projects'
+alias pyproj='cd ~/Google\ Drive/Projects/Python_Projects'
+
+#directory Navigation
+alias ..='cd ..'
+alias ...='cd ..; cd ..'
+alias ....='cd ..;cd ..;cd ..'
+
+#Git
+alias g='git'
+alias gst='git status'
+alias gcom='git commit -m'
+alias gclone='git clone'
+alias glog='git log'
+alias gall='git add .'
+
+#School SSH
+USER='knicely2'
+sshutk(){
+	ssh -l $USER "hydra$1.eecs.utk.edu"
+}
+
+# BashFiles for editing
+alias rcalias='vi ~/.bashFiles/.bashrc_aliases'
+alias rcprof='vi ~/.bashFiles/.bashrc_profile'
+alias rctest='vi ~/.bashFiles/.bashrc_test'
+
+# Remove a directory and all files
+alias bd='cd $OLDPWD'
+
+# Show open ports
+alias openports='netstat -nape --inet'
+
+# Reboot the system safily
+alias rebootsafe='sudo shutdown -r now'
+
+
+
+
+
