@@ -10,6 +10,7 @@ ps1_blue='\['"$blue"'\]'
 ps1_green='\['"$green"'\]'
 ps1_white='\['"$white"'\]'
 
+
 parse_git_branch() {
     gitstatus=`git status 2> /dev/null`
     if [[ `echo $gitstatus | grep "Changes to be committed"` != "" ]]
@@ -37,7 +38,7 @@ parse_git_branch_color() {
     if [[ $br == "(master)" || $br == "(master!)" || $br == "(master!!)" || $br == "(master!!!)" ]]; then
         echo -e "${blue}"
     else
-        echo -e "${red}"
+        echo -e "${green}"
     fi
 }
 
