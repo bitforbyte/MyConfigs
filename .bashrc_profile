@@ -1,6 +1,7 @@
 USER='Ken'
 # Colors for the prompt
 blue="\033[0;34m"
+red="\033[0;31m"
 white="\033[0;37m"
 green="\033[0;32m"
 
@@ -36,7 +37,7 @@ parse_git_branch_color() {
     if [[ $br == "(master)" || $br == "(master!)" || $br == "(master!!)" || $br == "(master!!!)" ]]; then
         echo -e "${blue}"
     else
-        echo -e "${green}"
+        echo -e "${red}"
     fi
 }
 
@@ -44,5 +45,6 @@ parse_git_branch_color() {
 #export PS1="@\h:\W\$(parse_git_branch) \$ "
 
 # With color:
-export PS1="$ps1_blue@\h:$ps1_white\W\[\$(parse_git_branch_color)\]\$(parse_git_branch) $ps1_blue\$$ps1_white "
+export PS1="$ps1_blue"
+export PS1+="Ken in $ps1_white[\W]\[\$(parse_git_branch_color)\]\$(parse_git_branch)$ps1_blue:$ps1_white "
 
