@@ -17,6 +17,8 @@ set expandtab		" Turn Tabs into spaces
 set number		" Show line numbers
 set relativenumber 	" Show numbers away from current line
 set showcmd		" Show command on bottom bar
+set splitright      " puts vertical split on right
+set splitbelow      " Puts horiaontal split on bottom
 
 filetype indent on 	" Load a file config indent file
 
