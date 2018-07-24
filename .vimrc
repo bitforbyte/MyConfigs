@@ -20,6 +20,18 @@ set showcmd		" Show command on bottom bar
 set splitright      " puts vertical split on right
 set splitbelow      " Puts horiaontal split on bottom
 
+"^[ = <ESC>; 5 = ctrl; 3 = left-alt
+"[1;5A ctrl-up | [1;5B ctrl-down | [1;5D  ctrl-left | [1;5C  ctrl-right
+map <ESC>[1;5A <C-w>k
+map <ESC>[1;5B <C-w>j
+map <ESC>[1;5D <C-w>h
+map <ESC>[1;5C <C-w>l
+" Insert mode mapping
+imap <ESC>[1;5A <C-o>k
+imap <ESC>[1;5B <C-o>j
+imap <ESC>[1;5D <C-o>h
+imap <ESC>[1;5C <C-o>l
+
 filetype indent on 	" Load a file config indent file
 
 set wildmenu		" Visual autocomplete for command menu
