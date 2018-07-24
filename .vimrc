@@ -22,15 +22,21 @@ set splitbelow      " Puts horiaontal split on bottom
 
 "^[ = <ESC>; 5 = ctrl; 3 = left-alt
 "[1;5A ctrl-up | [1;5B ctrl-down | [1;5D  ctrl-left | [1;5C  ctrl-right
-map <ESC>[1;5A <C-w>k
-map <ESC>[1;5B <C-w>j
-map <ESC>[1;5D <C-w>h
-map <ESC>[1;5C <C-w>l
+" Navagation while in insert mode
+imap <C-j> <c-o>j
+imap <C-k> <c-o>k
+imap <C-h> <c-o>h
+imap <C-l> <c-o>l
+" Normal mode mapping
+map <ESC>[1;3A <C-w>k
+map <ESC>[1;3B <C-w>j
+map <ESC>[1;3D <C-w>h
+map <ESC>[1;3C <C-w>l
 " Insert mode mapping
-imap <ESC>[1;5A <C-o>k
-imap <ESC>[1;5B <C-o>j
-imap <ESC>[1;5D <C-o>h
-imap <ESC>[1;5C <C-o>l
+imap <ESC>[1;3A <c-o><C-w>k
+imap <ESC>[1;3B <c-o><C-w>j
+imap <ESC>[1;3D <c-o><C-w>h
+imap <ESC>[1;3C <c-o><C-w>l
 
 filetype indent on 	" Load a file config indent file
 
