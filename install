@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+DOTFILE=".dotFile"
+CFILE="MyConfigs"
+BLINK=~/$DOTFILE/$CFILE/.bashrc
+VLINK=~/$DOTFILE/$CFILE/.vimrc
+printf "B:$BLINK\nV:$VLINK\n"
+#if [ $BLINK]

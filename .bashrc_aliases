@@ -19,6 +19,13 @@ alias ..='cd ..'
 alias ...='cd ..; cd ..'
 alias ....='cd ..;cd ..;cd ..'
 
+# Docker Aliases
+alias docker='sudo docker'
+alias docker-compose='sudo docker-compose'
+alias dockup='sudo docker-compose up -d --build'
+alias dockstop='sudo docker stop $(docker ps -a -q)'
+alias dockwipe='sudo docker rm $(docker ps -a -q); sudo docker rmi $(docker images -q)'
+
 #Git
 alias g='git'
 alias gst='git status'
