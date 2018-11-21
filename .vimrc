@@ -40,6 +40,8 @@ imap <ESC>[1;3B <c-o><C-w>j
 imap <ESC>[1;3D <c-o><C-w>h
 imap <ESC>[1;3C <c-o><C-w>l
 
+" Map the comment
+nmap <F2> :call AddComment()<CR>
 
 set wildmenu		" Visual autocomplete for command menu
 
@@ -86,3 +88,9 @@ set writebackup
 if has("autocmd")
         au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+" Vim function
+function! AddComment()
+	" Add the comment
+	r~/.dotFiles/MyConfigs/CommentFiles/comment.txt
+endfunction
