@@ -6,6 +6,7 @@ if has('autocmd')
 endif
 
 colorscheme elflord
+filetype indent on 	" Load a file config indent file
 
 " Enable syntax processing
 syntax enable
@@ -13,7 +14,8 @@ syntax enable
 " Tabs and spaces
 set tabstop=4		" Number of saces per TAB
 set softtabstop=4	" Number of spaces in tab when editing
-set expandtab		" Turn Tabs into spaces
+set shiftwidth=4
+"set expandtab		" Turn Tabs into spaces
 set number		" Show line numbers
 set relativenumber 	" Show numbers away from current line
 set showcmd		" Show command on bottom bar
@@ -38,7 +40,6 @@ imap <ESC>[1;3B <c-o><C-w>j
 imap <ESC>[1;3D <c-o><C-w>h
 imap <ESC>[1;3C <c-o><C-w>l
 
-filetype indent on 	" Load a file config indent file
 
 set wildmenu		" Visual autocomplete for command menu
 
