@@ -35,12 +35,6 @@ alias gclone='git clone'
 alias glog='git log'
 alias gall='git add .'
 
-# School SSH Currently not working
-USER='knicely2'
-sshutk(){
-	ssh -l $USER "hydra$1.eecs.utk.edu"
-}
-
 # BashFiles for editing
 alias rcalias='vi ~/.bashFiles/.bashrc_aliases'
 alias rcprof='vi ~/.bashFiles/.bashrc_profile'
@@ -60,6 +54,10 @@ alias shex='shopt -s extglob'
 # Disable command exclution (Best safe practice right after)
 alias noshex='shopt -u extglob'
 
+# Remap all permuates of make
+alias akem='make'
+alias mkae='make'
+alias amke='make'
 
 
 

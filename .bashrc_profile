@@ -10,7 +10,7 @@ ps1_blue='\['"$blue"'\]'
 ps1_green='\['"$green"'\]'
 ps1_white='\['"$white"'\]'
 
-
+# This will show the values while in a git repo
 parse_git_branch() {
     gitstatus=`git status 2> /dev/null`
     if [[ `echo $gitstatus | grep "Changes to be committed"` != "" ]]
@@ -41,9 +41,6 @@ parse_git_branch_color() {
         echo -e "${green}"
     fi
 }
-
-# No color:
-#export PS1="@\h:\W\$(parse_git_branch) \$ "
 
 # With color:
 export PS1="$ps1_blue"
