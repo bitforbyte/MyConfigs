@@ -2,7 +2,7 @@
 
 set noerrorbells visualbell t_vb=
 if has('autocmd')
-  autocmd GUIEnter * set visualbell t_vb =
+    autocmd GUIEnter * set visualbell t_vb =
 endif
 
 colorscheme elflord
@@ -10,7 +10,7 @@ filetype indent on 	" Load a file config indent file
 
 " Enable syntax processing
 syntax enable
-
+    
 " Tabs and spaces
 set tabstop=4		" Number of saces per TAB
 set softtabstop=4	" Number of spaces in tab when editing
@@ -21,6 +21,7 @@ set relativenumber 	" Show numbers away from current line
 set showcmd		" Show command on bottom bar
 set splitright      " puts vertical split on right
 set splitbelow      " Puts horiaontal split on bottom
+set autoindent
 
 "^[ = <ESC>; 5 = ctrl; 3 = left-alt
 "[1;5A ctrl-up | [1;5B ctrl-down | [1;5D  ctrl-left | [1;5C  ctrl-right
@@ -57,7 +58,23 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 set foldenable		" Enable folding
 set foldlevelstart=10	" Open most folds by default
-set foldmethod=marker	" Fold based on indent level
+set foldnestmax=10
+set foldmethod=manual	" Fold based on indent level
+nnoremap <space> za
+
+
+" Save AutoSaveFolds
+augroup AutoSaveFolds
+    autocmd!
+    autocmd BufWinLeave * mkview
+    autocmd BufWinEnter * silent loadview
+augroup END
+
+" AutoComplete
+set completeopt+=menuone
+"set completeopt+=noselect
+"set shortmess+=c
+"set belloff+=ctrlg
 
 
 " Movement(This will make it treat wrap around text as lines)
@@ -83,6 +100,9 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
+
+" Allows ctrl + r in visual mode, promted to replace text with, confirm or deny each 
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " Vim jump to last position when opening file
 if has("autocmd")
