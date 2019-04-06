@@ -6,7 +6,7 @@ if has('autocmd')
 endif
 
 colorscheme elflord
-filetype indent on 	" Load a file config indent file
+filetype indent on	" Load a file config indent file
 
 " Enable syntax processing
 syntax enable
@@ -15,13 +15,16 @@ syntax enable
 set tabstop=4		" Number of saces per TAB
 set softtabstop=4	" Number of spaces in tab when editing
 set shiftwidth=4
-"set expandtab		" Turn Tabs into spaces
+set expandtab		" Turn Tabs into spaces
 set number		" Show line numbers
-set relativenumber 	" Show numbers away from current line
+set relativenumber	" Show numbers away from current line
 set showcmd		" Show command on bottom bar
 set splitright      " puts vertical split on right
 set splitbelow      " Puts horiaontal split on bottom
 set autoindent
+
+" Testing python files
+nnoremap <C-p> :call ToggleListChars()<CR>
 
 "^[ = <ESC>; 5 = ctrl; 3 = left-alt
 "[1;5A ctrl-up | [1;5B ctrl-down | [1;5D  ctrl-left | [1;5C  ctrl-right

@@ -3,8 +3,8 @@ alias q='exit'
 alias c='clear'
 alias h='history'
 alias cs='clear;ls --color'
-alias ls='ls --color'
-alias lsa='ls -a --color'
+alias ls='ls -laXr --color'
+#alias lsa='ls -laXr --color'
 alias null='/dev/null'
 
 # Directories
