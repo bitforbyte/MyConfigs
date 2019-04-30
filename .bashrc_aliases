@@ -3,8 +3,8 @@ alias q='exit'
 alias c='clear'
 alias h='history'
 alias cs='clear;ls --color'
-alias ls='ls -laXr --color'
-#alias lsa='ls -laXr --color'
+alias ls='ls -lXr --color'
+alias lsa='ls -laXr --color'
 alias null='/dev/null'
 
 # Directories
@@ -34,6 +34,9 @@ alias gcom='git commit -m'
 alias gclone='git clone'
 alias glog='git log'
 alias gall='git add .'
+
+# Grep
+alias grep='grep --color=auto'
 
 # BashFiles for editing
 alias rcalias='vi ~/.bashFiles/.bashrc_aliases'

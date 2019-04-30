@@ -10,6 +10,8 @@ ps1_blue='\['"$blue"'\]'
 ps1_green='\['"$green"'\]'
 ps1_white='\['"$white"'\]'
 
+export PATH=$PATH:~/.scripts
+
 # This will show the values while in a git repo
 parse_git_branch() {
     gitstatus=`git status 2> /dev/null`
