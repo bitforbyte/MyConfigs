@@ -4,11 +4,13 @@ blue="\033[0;34m"
 yellow="\033[0;93m"
 white="\033[0;37m"
 green="\033[0;32m"
+lgtCyan="\033[0;36m"
 
 # Brackets needed around non-printable characters in PS1
 ps1_blue='\['"$blue"'\]'
 ps1_green='\['"$green"'\]'
 ps1_white='\['"$white"'\]'
+ps1_lgtCyan='\['"$lgtCyan"'\]'
 
 export PATH=$PATH:~/.scripts
 
@@ -45,8 +47,9 @@ parse_git_branch_color() {
 }
 
 # With color:
-export PS1="$ps1_blue"
-export PS1+="Ken in $ps1_white[\W]$ps1_blue"
-export PS1+="\[\$(parse_git_branch_color)\]\$(parse_git_branch)$ps1_blue:$ps1_white "
+#userColor= "$ps1_lgtCyan"
+export PS1="$ps1_lgtCyan"
+export PS1+="Ken in $ps1_white[\W]$ps1_lgtCyan"
+export PS1+="\[\$(parse_git_branch_color)\]\$(parse_git_branch)$ps1_lgtCyan:$ps1_white "
 
 

@@ -57,7 +57,7 @@ alias shex='shopt -s extglob'
 # Disable command exclution (Best safe practice right after)
 alias noshex='shopt -u extglob'
 
-# Remap all permuates of make
+# Remap all permuates of make cause my fingers are dummos
 alias akem='make'
 alias mkae='make'
 alias amke='make'

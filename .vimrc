@@ -22,6 +22,7 @@ set showcmd		" Show command on bottom bar
 set splitright      " puts vertical split on right
 set splitbelow      " Puts horiaontal split on bottom
 set autoindent
+set visualbell
 
 " Testing python files
 nnoremap <C-p> :call ToggleListChars()<CR>
