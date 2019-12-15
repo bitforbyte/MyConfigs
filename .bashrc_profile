@@ -14,6 +14,7 @@ ps1_lgtCyan='\['"$lgtCyan"'\]'
 
 export PATH=$PATH:~/.scripts
 
+shopt -s autocd # Will auto cd into directory 
 # This will show the values while in a git repo
 parse_git_branch() {
     gitstatus=`git status 2> /dev/null`

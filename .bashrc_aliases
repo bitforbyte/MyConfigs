@@ -6,6 +6,8 @@ alias cs='clear;ls --color'
 alias ls='ls -lXr --color'
 alias lsa='ls -laXr --color'
 alias null='/dev/null'
+alias cl='clear'
+alias ccat="highlight  --out-format=ansi"
 
 # Directories
 alias home='cd ~'
