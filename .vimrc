@@ -39,6 +39,7 @@ map <ESC>[1;3A <C-w>k
 map <ESC>[1;3B <C-w>j
 map <ESC>[1;3D <C-w>h
 map <ESC>[1;3C <C-w>l
+
 " Insert mode mapping
 imap <ESC>[1;3A <c-o><C-w>k
 imap <ESC>[1;3B <c-o><C-w>j
@@ -47,6 +48,8 @@ imap <ESC>[1;3C <c-o><C-w>l
 
 " Map the comment
 nmap <F2> :call AddComment()<CR>
+
+" wnrg spellling 
 
 set wildmenu		" Visual autocomplete for command menu
 
@@ -118,3 +121,5 @@ function! AddComment()
 	" Add the comment
 	r~/.dotFiles/MyConfigs/CommentFiles/comment.txt
 endfunction
+
+map <F6> :setlocal spell! spelllang=en_us<CR>
